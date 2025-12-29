@@ -1,0 +1,40 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base {
+    body {
+        color: var(--color-text);
+        font-family: "Rubik", sans-serif;
+    }
+
+    :root {
+        /* color-scheme: dark; */
+        --color-primary: #B9FF66; /* HSL values are often used for easier manipulation */
+        --color-text: #000;
+        --color-text-dark: #09090b;
+        --bg-color: #F3F3F3;
+        --bg-color-dark: #191A23;
+        /* ... other variables like font-size, spacing, etc. */
+    }
+    .dark {
+        --color-text: #09090b;
+        --color-text-dark: #ffffff;
+        --bg-color: #09090b;
+        --foreground: #ffffff;
+    }
+}
+
+@layer components {
+
+}
+
+
+@theme {
+    --color-color-primary: var(--color-primary);
+    --color-main-color: var(--bg-color);
+    --color-color-dark: var(--bg-color-dark);
+}
