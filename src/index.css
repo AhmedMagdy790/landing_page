@@ -38,3 +38,28 @@
     --color-main-color: var(--bg-color);
     --color-color-dark: var(--bg-color-dark);
 }
+
+@theme {
+    --animate-open-menu: openMenu 1s ease;
+    --animate-logo-menu-close: closeLogo 1s ease;
+
+    @keyframes openMenu {
+
+        0% {
+            transform: translateX(calc(-350px));
+        }
+        100% {
+            transform: translateX(0px)
+        }
+    }
+
+    @keyframes closeLogo {
+
+        0% {
+            transform: translateY(-100px) scale(1.5)
+        }
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+}

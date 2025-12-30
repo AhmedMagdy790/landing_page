@@ -1,11 +1,12 @@
 import { ArrowUpRight } from 'lucide-react';
+import ScrollAnmation from "./ScrollAnmation";
 
 const ServicesCards = ({title, image, href, mode }) => {
 
     const style = `
         flex justify-between
         py-8 px-6 md:py-12 md:px-10 border border-b-8 rounded-4xl border-color-dark
-        basis-full lg:basis-[48%]
+        w-full
     `;
     switch (mode) {
         case 'light':
@@ -18,6 +19,7 @@ const ServicesCards = ({title, image, href, mode }) => {
                         <a className="flex text-sm md:text-base items-center gap-4" href={href}><span className="inline-block p-1.5 bg-color-dark text-color-primary rounded-full"><ArrowUpRight /></span> Learn more</a>
                     </div>
                     <img className='max-sm:max-w-2/5' src={image} alt="" />
+
                 </div>
             );
         case 'primary':
