@@ -1,6 +1,9 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import CaseStudies from "./components/CaseStudies";
+import OurWirkingProcess from "./components/OurWirkingProcess";
+import Team from "./components/Team";
 
 
 function App() {
@@ -10,6 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <CaseStudies />
+      <OurWirkingProcess />
+      <Team />
     </div>
   )
 }

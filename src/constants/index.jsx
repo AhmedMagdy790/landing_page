@@ -1,4 +1,4 @@
-
+import images from "../assets/index";
 
 export const navItems = [
   { label: "About Us", href: "#" },
@@ -47,42 +47,87 @@ export const testimonials = [
   },
 ];
 
-export const features = [
+export const ourWorkingProcess = [
   {
-    icon: '',
-    text: "Drag-and-Drop Interface",
+    num: '01',
+    title: "Consultion",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+   {
+    num: '02',
+    title: "Research and Stategy Development",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+    {
+    num: '03',
+    title: "Implementation",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
   {
-    icon: '',
-    text: "Multi-Platform Compatibility",
+    num: '04',
+    title: "Monitoring and Optimzation",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
   {
-    icon: '',
-    text: "Built-in Templates",
+    num: '05',
+    title: "Reporting and Communication",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
-  {
-    icon: '',
-    text: "Real-Time Preview",
+   {
+    num: '06',
+    title: "continual impovement",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
+];
+
+export const teamData = [
   {
-    icon: '',
-    text: "Collaboration Tools",
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/images1.jpg'],
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
-  {
-    icon: '',
-    text: "Analytics Dashboard",
+   {
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/image2.jpg'],
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+   {
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/images3.jpg'],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+   {
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/images4.jpg'],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+   {
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/image5.jpg'],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
+  },
+   {
+    name: 'John Smith',
+    subTitle: "CED and Founder",
+    image: images['./images/team/images6.jpg'],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit.",
   },
 ];
 

@@ -1,6 +1,5 @@
 import images from "../assets/index";
 import Header from "./Header";
-import { ArrowUpRight } from 'lucide-react';
 import ServicesCards from "./ServicesCards";
 import ScrollAnmation from "./ScrollAnmation";
 

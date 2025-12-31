@@ -1,0 +1,6 @@
+# netlify.toml
+[[plugins]]
+package = "netlify-plugin-name"
+
+  [plugins.inputs]
+  someInput = "value"
