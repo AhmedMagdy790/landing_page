@@ -11,6 +11,10 @@
         font-family: "Rubik", sans-serif;
     }
 
+    .container {
+        overflow: hidden;
+    }
+
     .fallback-mask {
         mask-image: none;
         -webkit-mask-image: none;

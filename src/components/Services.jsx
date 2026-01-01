@@ -70,7 +70,7 @@ const Services = () => {
                         <div className="p-6 md:p-10 lg:basis-2/4">
                             <h2 className="text-2xl mb-5">Let's make things happen</h2>
                             <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deserunt placeat ad earum ipsa harum dolores odio magni rem inventore! Fugiat perferendis a voluptate corporis laboriosam! Id recusandae laborum officiis!</p>
-                            <a className="inline-block py-3 px-4 bg-color-dark text-white rounded-2xl" href="#">Get your free proposal</a>
+                            <a className="inline-block py-3 px-4 bg-color-dark text-white rounded-2xl hover:bg-color-dark/90 transition" href="#">Get your free proposal</a>
                         </div>
                         
                         <img className="hidden lg:block max-w-md scale-120" src={images['./images/services/image7.png']} alt="" />

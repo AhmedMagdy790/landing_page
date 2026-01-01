@@ -1,3 +1,4 @@
+import { href } from "react-router-dom";
 import images from "../assets/index";
 
 export const navItems = [
@@ -8,7 +9,7 @@ export const navItems = [
   { label: "Blog", href: "#" },
 ];
 
-export const testimonials = [
+export const testimonialsData = [
   {
     user: "John Doe",
     company: "Stellar Solutions",
@@ -46,6 +47,21 @@ export const testimonials = [
     text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
   },
 ];
+export const caseStudiesData = [
+  {
+    href: '#',
+    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+  },
+   {
+    href: '#',
+    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+  },
+   {
+    href: '#',
+    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+  },
+];
+
 
 export const ourWorkingProcess = [
   {

@@ -30,7 +30,7 @@ const CardsOurWorkingProcess = () => {
                         <span className="text-4xl lg:text-5xl inline-block">0{index + 1}</span>
                         <h2 className="text-2xl lg:text-3xl">{item.title}</h2>
                         <button type="button" onClick={()=>toggleCardOurWorking(index)}
-                         className="ms-auto cursor-pointer">
+                         className="ms-auto cursor-pointer active:scale-110 active:rotate-10">
                             {openCards.includes(index) ? <CircleMinus size={50} /> : <CirclePlus size={50} className="" />}
                         </button>
                     </div>

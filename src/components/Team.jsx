@@ -9,7 +9,7 @@ const Team = () => {
         <section className="py-10">
             <div className="container mx-auto mb-5 px-4">
                 <Header title="Team" desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi maiores sit odit perferendis iusto nisi quasi unde ducimus, officiis possimus repellat suscipit enim vel, nemo nulla corporis esse similique." />
-                <div className="flex flex-wrap gap-y-5 gap-x-8 mb-30 ">
+                <div className="flex flex-wrap gap-y-5 gap-x-8 mb-10">
 
                 {teamData.map((item) => (
                     <ScrollAnmation style="flex basis-full lg:basis-[calc(50%-20px)] xl:basis-[calc(33%-20px)]"  type="fade" direction="right" delay={100}>
@@ -20,11 +20,13 @@ const Team = () => {
                                 description={item.description}
                                 href="#"  />
                     </ScrollAnmation>
-
                 ))}
-
+                </div>
+                <div className="flex justify-end">
+                    <a className="inline-block py-5 px-15 text-lg bg-color-dark text-white rounded-2xl hover:bg-color-dark/90 transition" href="#">See all team</a>
                 </div>
             </div>
+
         </section>
     );
 }
