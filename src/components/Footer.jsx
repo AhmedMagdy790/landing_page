@@ -45,6 +45,7 @@ const Footer = () => {
                                 bg-white dark:bg-[#292A32] p-2 w-[40px] h-[40px] rounded-full cursor-pointer
                                 transition-all duration-300
                                 hover:bg-black hover:text-white hover:scale-110
+                                active:bg-black active:text-white active:scale-110
                             "
                             />
                         </a>
@@ -57,6 +58,7 @@ const Footer = () => {
                             text-center rounded-full cursor-pointer
                             transition-all duration-300
                             hover:bg-blue-700 hover:text-white hover:scale-110
+                            active:bg-blue-700 active:text-white active:scale-110
                             "
                         >
                             in

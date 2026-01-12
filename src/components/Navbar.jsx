@@ -1,12 +1,40 @@
 import images from "../assets/index";
 import {navItems} from "../constants/index";
-import { TextAlignJustify, X } from 'lucide-react';
+import { TextAlignJustify, X, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [showModel, setShowModel] = useState(false);
     const [showNav, setShowNav] = useState(true);
     const [lastScroll, setLastScroll] = useState(0);
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+        setIsDark(true);
+        document.documentElement.classList.add("dark");
+        } else if (savedTheme === "light") {
+        setIsDark(false);
+        document.documentElement.classList.remove("dark");
+        } else {
+        // احترام نظام التشغيل
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setIsDark(prefersDark);
+        document.documentElement.classList.toggle("dark", prefersDark);
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        setIsDark(!isDark);
+        if (!isDark) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        }
+    };
 
     const toggleModel = () => {
         setShowModel(!showModel);
@@ -34,6 +62,15 @@ const Navbar = () => {
     useEffect(() => {
         document.body.style.overflow = showModel ? 'hidden' : 'auto';
     }, [showModel]);
+
+    document.documentElement.classList.toggle(
+      "dark",
+      localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+
+
 
     return (
         <>
@@ -120,8 +157,18 @@ const Navbar = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <div>
-                                    <a 
+                                <div className="flex gap-5 flex-col-reverse lg:flex-row">
+                                        <button
+                                                onClick={toggleTheme}
+                                                className="self-start p-4 rounded-full bg-blue-500/90 dark:bg-gray-700 text-xl shadow-lg hover:scale-105 transition-transform cursor-pointer"
+                                            >
+                                                {isDark ? (
+                                                    <Moon color="#fff"/>
+                                                ) : (
+                                                    <Sun color="#fff"/>
+                                                )}
+                                            </button>
+                                        <a 
                                         className={`
                                             text-color-text
                                             text-sm md:text-base px-6 py-4 
@@ -135,7 +182,7 @@ const Navbar = () => {
                             </div>
 
 
-                            <button type="button" onClick={toggleModel} className="text-color-text p-2 lg:hidden cursor-pointer active:scale-120 transition" aria-label="Open Menu">
+                            <button type="button" onClick={toggleModel} className=" text-color-text p-2 lg:hidden cursor-pointer active:scale-120 transition" aria-label="Open Menu">
                                     {showModel ? <X size={30} /> : <TextAlignJustify size={30}/> }
                             </button>
                         </div>
