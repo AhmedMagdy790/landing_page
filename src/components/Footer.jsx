@@ -15,7 +15,6 @@ const Footer = () => {
                 <div className="flex gap-10 items-center justify-between mb-10">
                     <img
                         className={`
-                            z-[51]
                             w-[120px] max-w-[200px]
                         `}
                         src={images['./images/logo-light.png']}
@@ -32,7 +31,7 @@ const Footer = () => {
                         <a href="#" target="_blank" rel="noopener noreferrer">
                             <Facebook
                             className="
-                                bg-white p-2 w-[40px] h-[40px] rounded-full cursor-pointer
+                                bg-white dark:bg-[#292A32] p-2 w-[40px] h-[40px] rounded-full cursor-pointer
                                 transition-all duration-300
                                 hover:bg-blue-600 hover:text-white hover:scale-110
                                 active:bg-blue-600 active:text-white active:scale-110
@@ -43,7 +42,7 @@ const Footer = () => {
                         <a href="#" target="_blank" rel="noopener noreferrer">
                             <X
                             className="
-                                bg-white p-2 w-[40px] h-[40px] rounded-full cursor-pointer
+                                bg-white dark:bg-[#292A32] p-2 w-[40px] h-[40px] rounded-full cursor-pointer
                                 transition-all duration-300
                                 hover:bg-black hover:text-white hover:scale-110
                             "
@@ -53,7 +52,7 @@ const Footer = () => {
                         <a
                             href="#"
                             className="
-                            inline-block bg-white font-bold text-lg
+                            inline-block bg-white dark:bg-[#292A32] font-bold text-lg
                             p-2 w-[40px] h-[40px] leading-[24px]
                             text-center rounded-full cursor-pointer
                             transition-all duration-300

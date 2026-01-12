@@ -128,6 +128,7 @@ const Navbar = () => {
                                             md:px-8 border 
                                             rounded-lg
                                             hover:bg-black hover:text-white dark:hover:bg-color-primary dark:hover:text-color-dark
+                                            active:bg-black active:text-white dark:active:bg-color-primary dark:active:text-color-dark
                                             transition`}
                                         href="#">Request a quote</a>
                                 </div>
