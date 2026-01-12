@@ -39,20 +39,38 @@ const Navbar = () => {
         <>
         <div className="h-[91px]">
                 <nav className={`
-                    ${showNav ? "translate-y-0" : "-translate-y-full"}
-                     ${lastScroll > 50  ? 'bg-black/10 text-color-dark  drop-shadow-sm' : ''}
-                    fixed top-0 left-0 right-0 z-50 backdrop-blur-lg
-                    transition
+                   
+                    ${showNav ? "translate-X-0" : "-translate-X-full"}
+                     ${lastScroll > 50  ? 'bg-black/10 dark:bg-black/70 text-white  drop-shadow-sm' : ''}
+                    fixed top-0 left-0 right-0 z-50 backdrop-blur-lg transition
                     `}>
                     <div className="container mx-auto px-5">
                         <div className="flex justify-between items-center py-5">
-                            <div className="z-[51]">
-                                <img className={`
-                                    ${showModel ? 'animate-open-menu' : 'animate-logo-menu-close'} 
-                                    z-[51]
-                                    w-[150px] sm:w-auto max-w-[200px]`
-                                    } 
-                                    src={images['./images/logo.png']} alt="Company Logo" />
+                            <div className="z-[51] ">
+                                    {/* Light mode */}
+                                    <img
+                                    className={`
+                                        ${showModel ? 'animate-logo' : 'animate-logo-menu-close'}
+                                        z-[51] block dark:hidden
+                                        w-[150px] max-w-[200px]
+                                    `}
+                                    src={images['./images/logo.png']}
+                                    alt="Company Logo"
+                                    />
+
+                                    {/* Dark mode */}
+                                    <img
+                                    className={`
+                                        
+                                        ${showModel ? 'animate-logo' : 'animate-logo-menu-close'}
+                                        transition
+                                        z-[51] hidden dark:block
+                                        w-[150px] max-w-[200px]
+                                    `}
+                                    src={images['./images/logo-light.png']}
+                                    alt="Company Logo Dark"
+                                    />
+
                             </div>
 
                             {/* Layer  */}
@@ -65,12 +83,13 @@ const Navbar = () => {
 
 
                             <div className={` 
-                                text-neutral-500
                                 ${showModel 
                                     ? 'flex'
                                     : 'hidden'} 
-
+                                transition-all
+                                text-neutral-500
                                 lg:flex items-center gap-12 
+                               
                                 ${showModel 
                                     ? `z-50 pt-[100px] py-5 px-5 min-w-80 flex-col items-start absolute start-0 top-0 bottom-0 
                                     h-screen bg-main-color shadow-lg
@@ -86,27 +105,36 @@ const Navbar = () => {
                                 
                                 <ul className={`
                                     flex gap-3
+                                    
                                     ${showModel
                                         ? "flex-col"
                                         : ""
                                     }
+                                    text-color-text
                                     `}>
                                     {navItems.map((item, index) => (
                                         <li key={index}>
                                             <a 
-                                            style={{ textShadow: "0px 0px 15px #fff" }}
-                                            className="inline-block py-2 px-3 transition-transform duration-200 ease-out  will-change-transform text-base leading-normal hover:-translate-y-1" 
+                                            className="inline-block py-2 px-3 text-shadow-[0px_0px_15px_#fff] transition-transform duration-200 ease-out  will-change-transform text-base leading-normal hover:-translate-y-1" 
                                             href={item.href}>{item.label} </a>
                                         </li>
                                     ))}
                                 </ul>
                                 <div>
-                                    <a className="text-sm md:text-base px-6 py-4 md:px-8 border rounded-md hover:bg-black hover:text-white transition" href="#">Request a quote</a>
+                                    <a 
+                                        className={`
+                                            text-color-text
+                                            text-sm md:text-base px-6 py-4 
+                                            md:px-8 border 
+                                            rounded-lg
+                                            hover:bg-black hover:text-white dark:hover:bg-color-primary dark:hover:text-color-dark
+                                            transition`}
+                                        href="#">Request a quote</a>
                                 </div>
                             </div>
 
 
-                            <button type="button" onClick={toggleModel} className="p-2 lg:hidden cursor-pointer active:scale-120 transition" aria-label="Open Menu">
+                            <button type="button" onClick={toggleModel} className="text-color-text p-2 lg:hidden cursor-pointer active:scale-120 transition" aria-label="Open Menu">
                                     {showModel ? <X size={30} /> : <TextAlignJustify size={30}/> }
                             </button>
                         </div>

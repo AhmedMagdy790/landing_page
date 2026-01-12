@@ -23,8 +23,9 @@ const CardsOurWorkingProcess = () => {
         <div className="">
             {ourWorkingProcess.map((item, index) => (
                 <div className={`
-                    px-6 md:px-14 mb-10 text-color-dark
-                    ${openCards.includes(index) ? 'bg-color-primary' : 'bg-main-color'} 
+                    
+                    px-6 md:px-14 mb-10 dark:text-color-dark dark:text-neutral-400
+                    ${openCards.includes(index) ? 'bg-color-primary' : 'dark:bg-color-dark'} 
                     border border-b-6 border-color-dark rounded-4xl`}>
                     <div className="py-8 md:py-15 flex gap-5 items-center">
                         <span className="text-4xl lg:text-5xl inline-block">0{index + 1}</span>

@@ -9,6 +9,7 @@
     body {
         color: var(--color-text);
         font-family: "Rubik", sans-serif;
+        background-color: var(--bg-color-body);
     }
 
     .container {
@@ -28,6 +29,7 @@
         --color-text-dark: #09090b;
         --bg-color: #F3F3F3;
         --bg-color-dark: #191A23;
+        --bg-color-body: #fff;
         /* ... other variables like font-size, spacing, etc. */
     }
     .dark {
@@ -35,6 +37,7 @@
         --color-text-dark: #ffffff;
         --bg-color: #09090b;
         --foreground: #ffffff;
+        --bg-color-body: var(--bg-color)
     }
 }
 
@@ -47,17 +50,30 @@
     --color-color-primary: var(--color-primary);
     --color-main-color: var(--bg-color);
     --color-color-dark: var(--bg-color-dark);
+    --color-color-text: var(--color-text-dark);
 }
 
+
 @theme {
-    --animate-open-menu: openMenu 0.5s ease;
-    --animate-logo-menu-close: closeLogo 0.5s ease;
+    --animate-logo: logo 0.6s ease;
+    --animate-open-menu: openMenu 0.2s ease;
+    --animate-logo-menu-close: closeLogo 0.6s ease;
     --drop-shadow-vercal: 0px 0px 10pxpx rgba(0, 0, 0); 
+
+    @keyframes logo {
+
+        0% {
+            transform: translateY(-350px);
+        }
+        100% {
+            transform: translateY(0px)
+        }
+    }
 
     @keyframes openMenu {
 
         0% {
-            transform: translateX(calc(-350px));
+            transform: translateX(-350px);
         }
         100% {
             transform: translateX(0px)
@@ -69,6 +85,7 @@
         0% {
             transform: translateY(-100px) scale(1.5)
         }
+        
         100% {
             transform: translateY(0px) scale(1)
         }

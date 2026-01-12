@@ -5,12 +5,14 @@ import CaseStudies from "./components/CaseStudies";
 import OurWirkingProcess from "./components/OurWirkingProcess";
 import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
+import ContactUS from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 
 function App() {
 
   return (
-    <div>
+    <div className="text-color-text">
       <Navbar />
       <Hero />
       <Services />
@@ -18,6 +20,8 @@ function App() {
       <OurWirkingProcess />
       <Team />
       <Testimonials />
+      <ContactUS />
+      <Footer />
     </div>
   )
 }

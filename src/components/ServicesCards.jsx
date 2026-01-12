@@ -11,12 +11,12 @@ const ServicesCards = ({title, image, href, mode }) => {
     switch (mode) {
         case 'light':
             return (
-                <div className={`${style} bg-main-color`}>
+                <div className={`${style} bg-main-color dark:bg-white`}>
                     <div className="flex flex-col justify-between">
                         <div className='mb-10'>
                         <p className="inline p-1 text-lg  md:text-2xl bg-color-primary box-decoration-clone">{title}</p>
                         </div>
-                        <a className="flex text-sm md:text-base items-center gap-4" href={href}><span className="inline-block p-1.5 bg-color-dark text-color-primary rounded-full"><ArrowUpRight /></span> Learn more</a>
+                        <a className="dark:text-color-dark flex text-sm md:text-base items-center gap-4" href={href}><span className="inline-block p-1.5 bg-color-dark text-color-primary rounded-full"><ArrowUpRight /></span> Learn more</a>
                     </div>
                     <img className='max-sm:max-w-2/5' src={image} alt="" />
 
@@ -29,7 +29,7 @@ const ServicesCards = ({title, image, href, mode }) => {
                         <div className='mb-10'>
                             <p className="inline p-1 text-lg md:text-2xl bg-main-color box-decoration-clone">{title}</p>
                         </div>
-                        <a className="flex text-sm md:text-base items-center gap-4" href={href}><span className="inline-block p-1.5 bg-color-dark text-color-primary rounded-full"><ArrowUpRight /></span> Learn more</a>
+                        <a className="text-color-dark flex text-sm md:text-base items-center gap-4" href={href}><span className="inline-block p-1.5 bg-color-dark text-color-primary rounded-full"><ArrowUpRight /></span> Learn more</a>
                     </div>
                     <img className='max-sm:max-w-2/5' src={image} alt="" />
                 </div>
@@ -42,7 +42,7 @@ const ServicesCards = ({title, image, href, mode }) => {
                         <div className='mb-10'>
                             <p className="inline p-1 text-lg md:text-2xl bg-main-color box-decoration-clone">{title}</p>
                         </div>
-                        <a className="text-main-color text-sm md:text-base flex items-center gap-4" href={href}><span className="inline-block p-1.5 bg-main-color text-color-dark rounded-full"><ArrowUpRight /></span> Learn more</a>
+                        <a className="text-white text-sm md:text-base flex items-center gap-4" href={href}><span className="inline-block p-1.5 bg-main-color text-color-dark dark:text-white rounded-full"><ArrowUpRight /></span> Learn more</a>
                     </div>
                     <img className='max-sm:max-w-2/5' src={image} alt="" />
                 </div>

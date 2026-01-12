@@ -226,3 +226,10 @@ export const communityLinks = [
   { href: "#", text: "Hackathons" },
   { href: "#", text: "Jobs" },
 ];
+
+export const footerData = {
+  email: "info@email.com",
+  phone: "464-567-5465",
+  address: '1234 Main st',
+  stardust: 'moostone City, Stardust 12345'
+}
